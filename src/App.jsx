@@ -9,15 +9,9 @@ const App = () => {
     <div>
 
       <div className="jumbotron">
-      <h1 className="display-4">Top Stories</h1>
-      <p className="lead">Some text here</p>
+      <h1 className="display-4">NOLA.com's Top Five</h1>
+      <p className="lead">Contributors on Facebook</p>
       <Content />
-      {/* <hr className="my-4"/>
-      <p>some boilerplate</p>
-      <p className="lead">
-        <a className="btn btn-primary btn-lg" href="#" role="button">See more</a>
-        </p> */}
-
       </div>
 
     </div>

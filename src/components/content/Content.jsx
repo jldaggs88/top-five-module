@@ -6,18 +6,18 @@ const Content = () => {
 
   const getData = () => {
     axios.get(`/analytics/posts`, {})
-      .then(res => {
-        const data = res.data.data;
-        console.log(data);
-        const top = data.map((e, i)=>{
-          setTopFive([...topFive, topFive[i] = <div className="story-card">
-            <hr className="my-4"/>
-            <img src={e.image_url} alt="" />
-            <a href={e.link} className="button">{e.title}</a>
-            <p className="lead">
-              <a className="btn btn-primary btn-lg" href="#" role="button">See more</a>
-            </p>
-          </div>])
+    .then(res => {
+      const data = res.data.data;
+      console.log(data);
+      const top = data.map((e, i)=>{
+        setTopFive([...topFive, topFive[i] = <div className="story-card" key={i + 'story'}>
+          <img class="card-img-top" src={e.image_url} alt="Card image" />
+          <div class="card-body">
+            <p class="card-title"><a href={e.link} className="title-button">{e.title}</a></p>
+            <small class="text-muted">{e.author}</small>
+          </div>
+        </div>
+        ])
         })
       })
       .catch((error) => {

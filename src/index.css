@@ -1,0 +1,20 @@
+a.title-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
+  font-size: 20px;
+  color: initial;
+}
+
+.stories-container {
+  column-count: 5;
+  column-gap: 1.25rem;
+}
+
+.story-card {
+  width: 100%;
+  display: inline-block;
+  border: ridge;
+}

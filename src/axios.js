@@ -5,7 +5,7 @@ const instance = axios.create({
   params: {
     apikey: process.env.API_KEY,
     secret: process.env.API_SECRET,
-    sort: "fb_interactions",
+    sort: "fb_referrals",
     limit: 5
   },
 });
