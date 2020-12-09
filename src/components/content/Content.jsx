@@ -11,10 +11,10 @@ const Content = () => {
       console.log(data);
       const top = data.map((e, i)=>{
         setTopFive([...topFive, topFive[i] = <div className="story-card" key={i + 'story'}>
-          <img class="card-img-top" src={e.image_url} alt="Card image" />
-          <div class="card-body">
-            <p class="card-title"><a href={e.link} className="title-button">{e.title}</a></p>
-            <small class="text-muted">{e.author}</small>
+          <img className="card-img-top" src={e.image_url} alt="Card image" />
+          <div className="card-body">
+            <p className="card-title"><a href={e.link} className="title-button">{e.title}</a></p>
+            <small className="text-muted">{e.author}</small>
           </div>
         </div>
         ])
