@@ -1,4 +1,5 @@
-const Dotenv = require('dotenv-webpack');
+const webpack = require('webpack');
+
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path');
 const htmlPlugin = new HtmlWebPackPlugin({
@@ -7,13 +8,18 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 module.exports = {
   entry: "./src/index.js",
-  mode: 'development',
+  mode: 'production',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: "[name].js"
   },
   plugins: [
-    new Dotenv(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'BASE_URL': JSON.stringify(process.env.BASE_URL),
+        'API_KEY': JSON.stringify(process.env.API_KEY),
+        'API_SECRET': JSON.stringify(process.env.API_SECRET)      }
+    }),
     htmlPlugin
   ],
   performance: {
