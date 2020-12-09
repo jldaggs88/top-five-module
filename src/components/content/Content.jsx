@@ -10,23 +10,14 @@ const Content = () => {
         const data = res.data.data;
         console.log(data);
         const top = data.map((e, i)=>{
-          // if(topFive === undefined){
-          //   return null;
-          // } else {
-            setTopFive([...topFive, topFive[i] = <div className="story-card">
-              <hr className="my-4"/>
-              <img src={e.image_url} alt="" /> 
-              <button class="story-link" onClick={(e) => {
-                e.preventDefault();
-                window.location.href=`${e.link}`;
-              }}>
-                {e.title}
-              </button>
-              <p className="lead">
-                <a className="btn btn-primary btn-lg" href="#" role="button">See more</a>
-              </p>
-            </div>])
-          // }
+          setTopFive([...topFive, topFive[i] = <div className="story-card">
+            <hr className="my-4"/>
+            <img src={e.image_url} alt="" />
+            <a href={e.link} className="button">{e.title}</a>
+            <p className="lead">
+              <a className="btn btn-primary btn-lg" href="#" role="button">See more</a>
+            </p>
+          </div>])
         })
       })
       .catch((error) => {
