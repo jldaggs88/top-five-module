@@ -18,7 +18,7 @@ These instructions will get you a copy of the project up and running on your loc
 7. Run the command **_npm run start_** to just start the server/index.js.
 8. Run the command **_npm run build_** to begin starting frontend.
 9. Run the command **_npm run dev_** to start development server.
-10. Type **localhost:3000** into browser to see my prototype.
+10. Type **localhost:3000** into browser to see the prototype.
 
 ## Built With
 
