@@ -17,7 +17,7 @@ const Content = () => {
     })
     .then(res => {
       const data = res.data.data;
-      console.log(data, 'here');
+      console.log(data, 'top authors');
       const top = data.map((e, i)=>{
         axios.get(`/analytics/posts`, {
           baseURL: process.env.BASE_URL,

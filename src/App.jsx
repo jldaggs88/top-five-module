@@ -9,8 +9,7 @@ const App = () => {
     <div>
 
       <div className="jumbotron">
-      <h1 className="display-4">NOLA.com's Top Five</h1>
-      <p className="lead">Contributors on Facebook</p>
+      <p className="lead">TRENDING ON FACEBOOK</p>
       <Content />
       </div>
 
