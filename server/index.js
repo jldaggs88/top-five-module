@@ -1,7 +1,6 @@
 // make server
 const express = require('express');
 const path = require('path');
-// const request = require('request');
 
 const app = express();
 
